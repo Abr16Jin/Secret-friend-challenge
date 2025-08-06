@@ -26,7 +26,6 @@ function agregarAmigo()
         
         limpiarCaja();
     }
-    
     function update_list()
     {
         const listaHTML = document.getElementById("listaAmigos");
@@ -38,6 +37,22 @@ function agregarAmigo()
                 listaHTML.appendChild(li);
             });
     }//actualizar lista inferior
+function sortearAmigo()
+    {
+        if(amigosCantidad == 0)
+        {
+            alert("No se puede sortear sin nadie!")
+        }
+        else if (amigosCantidad === 1)
+        {
+            alert("¡Agrega más amigos!")
+        }
+        else{
+            let sorteoSecreto = Math.floor(Math.random()*amigosCantidad)+1;
+            let resultado = amigos[sorteoSecreto];
+            console.log(resultado);
+        }         
+    }
 function element_text(elemento, texto)  //solo eventos
     {
         let elementoHTML = document.querySelector(elemento);
