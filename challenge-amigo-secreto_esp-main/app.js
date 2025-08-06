@@ -48,9 +48,12 @@ function sortearAmigo()
             alert("¡Agrega más amigos!")
         }
         else{
-            let sorteoSecreto = Math.floor(Math.random()*amigosCantidad)+1;
-            let resultado = amigos[sorteoSecreto];
-            console.log(resultado);
+            let sorteoSecreto = Math.floor(Math.random()*amigosCantidad);
+            let amigoSecreto = amigos[sorteoSecreto];
+            //limpiar 
+            resultado.innerHTML = "";
+            //mostrar
+            resultado.innerHTML = `<li>¡${amigoSecreto} es el amigo secreto!</li>`;
         }         
     }
 function element_text(elemento, texto)  //solo eventos
