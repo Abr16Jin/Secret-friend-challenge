@@ -26,6 +26,18 @@ function agregarAmigo()
         
         limpiarCaja();
     }
+    
+    function update_list()
+    {
+        const listaHTML = document.getElementById("listaAmigos");
+        listaHTML.innerHTML = "";
+        amigos.forEach(amigo => 
+            {
+                const li = document.createElement("li");
+                li.textContent = amigo;
+                listaHTML.appendChild(li);
+            });
+    }//actualizar lista inferior
 function element_text(elemento, texto)  //solo eventos
     {
         let elementoHTML = document.querySelector(elemento);
